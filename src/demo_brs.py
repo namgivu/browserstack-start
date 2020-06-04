@@ -1,17 +1,22 @@
 import time, os
 from src.driver import windows_driver, osx_driver
 
-app_path = os.path.abspath(__file__ + '/../..')
+APP_HOME = os.path.abspath(__file__ + '/../..')
 
 def google_search(driver, browser_name):
     driver.get('http://www.google.com')
+
+    # enter search keyword
     search_input = driver.find_element_by_name('q')
     search_input.send_keys('360f product')
     search_input.submit()
 
+    # take screenshot
     time.sleep(3)
-    driver.save_screenshot(f'{app_path}/screen_shot/{browser_name}.png')
-    driver.quit()
+    driver.save_screenshot(f'{APP_HOME}/screen_shot/{browser_name}.png')
+
+    # the end
+    driver.quit()  # CAUTION: don't forget to call .quit() or you will get timeout from :brs
 
 class Test:
 
