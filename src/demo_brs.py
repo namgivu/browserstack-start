@@ -1,5 +1,5 @@
 import time, os
-from src.driver import windows_driver, osx_driver
+from src.driver import load_webdriver_mswindows, load_webdriver_macos
 
 APP_HOME = os.path.abspath(__file__ + '/../..')
 
@@ -23,26 +23,26 @@ def run_googlesearchdemo(driver, browser_name):
 class Test:
 
     def test_IE(self):
-        dv = windows_driver(browser='IE', browser_version='11', name='IE First Test')
+        dv = load_webdriver_mswindows(browser='IE', browser_version='11', name='IE First Test')
         run_googlesearchdemo(dv, 'IE')
 
     def test_Edge(self):
         # TODO why can not run with Edge version 80 81
-        dv = windows_driver(browser='Edge', browser_version='18', name='Edge First Test')
+        dv = load_webdriver_mswindows(browser='Edge', browser_version='18', name='Edge First Test')
         run_googlesearchdemo(dv, 'Edge')
 
     def test_Firefox(self):
-        dv = windows_driver(browser='Firefox', browser_version='74', name='Firefox First Test')
+        dv = load_webdriver_mswindows(browser='Firefox', browser_version='74', name='Firefox First Test')
         run_googlesearchdemo(dv, 'Firefox')
 
     def test_Chrome(self):
-        dv = windows_driver(browser='Chrome', browser_version='81', name='Chrome First Test')
+        dv = load_webdriver_mswindows(browser='Chrome', browser_version='81', name='Chrome First Test')
         run_googlesearchdemo(dv, 'Chrome')
 
     def test_Safari(self):
-        dv = osx_driver(browser='Safari', browser_version='13', name='Safari First Test')
+        dv = load_webdriver_macos(browser='Safari', browser_version='13', name='Safari First Test')
         run_googlesearchdemo(dv, 'Safari')
 
     def test_Chrome_OSX(self):
-        dv = osx_driver(browser='Chrome', browser_version='81', name='Chrome_OSX First Test')
+        dv = load_webdriver_macos(browser='Chrome', browser_version='81', name='Chrome_OSX First Test')
         run_googlesearchdemo(dv, 'Chrome_OSX')
