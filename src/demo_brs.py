@@ -3,7 +3,7 @@ from src.driver import windows_driver, osx_driver
 
 APP_HOME = os.path.abspath(__file__ + '/../..')
 
-def google_search(driver, browser_name):
+def run_googlesearchdemo(driver, browser_name):
     driver.get('http://www.google.com')
 
     # enter search keyword
@@ -24,25 +24,25 @@ class Test:
 
     def test_IE(self):
         dv = windows_driver(browser='IE', browser_version='11', name='IE First Test')
-        google_search(dv, 'IE')
+        run_googlesearchdemo(dv, 'IE')
 
     def test_Edge(self):
         # TODO why can not run with Edge version 80 81
         dv = windows_driver(browser='Edge', browser_version='18', name='Edge First Test')
-        google_search(dv, 'Edge')
+        run_googlesearchdemo(dv, 'Edge')
 
     def test_Firefox(self):
         dv = windows_driver(browser='Firefox', browser_version='74', name='Firefox First Test')
-        google_search(dv, 'Firefox')
+        run_googlesearchdemo(dv, 'Firefox')
 
     def test_Chrome(self):
         dv = windows_driver(browser='Chrome', browser_version='81', name='Chrome First Test')
-        google_search(dv, 'Chrome')
+        run_googlesearchdemo(dv, 'Chrome')
 
     def test_Safari(self):
         dv = osx_driver(browser='Safari', browser_version='13', name='Safari First Test')
-        google_search(dv, 'Safari')
+        run_googlesearchdemo(dv, 'Safari')
 
     def test_Chrome_OSX(self):
         dv = osx_driver(browser='Chrome', browser_version='81', name='Chrome_OSX First Test')
-        google_search(dv, 'Chrome_OSX')
+        run_googlesearchdemo(dv, 'Chrome_OSX')
