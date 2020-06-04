@@ -10,7 +10,7 @@ def load_webdriver_mswindows(browser, browser_version, name):  # mswindows aka m
         'os_version'      : '10',
         'browser'         : browser,
         'browser_version' : browser_version,
-        'name'            : name
+        'name'            : name,
     }
 
     driver = webdriver.Remote(command_executor=BROWSERSTACK_URL, desired_capabilities=desired_cap)
@@ -24,7 +24,7 @@ def load_webdriver_macos(browser, browser_version, name):
         'os_version'      : 'Catalina',
         'browser'         : browser,
         'browser_version' : browser_version,
-        'name'            : name
+        'name'            : name,
     }
 
     driver = webdriver.Remote(command_executor=BROWSERSTACK_URL, desired_capabilities=desired_cap)
