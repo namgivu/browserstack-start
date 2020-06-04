@@ -1,5 +1,6 @@
 from selenium import webdriver
 
+#TODO Trang put this to .env
 BROWSERSTACK_URL = 'https://trangtruong2:pgXmLCHysJEM7XrYpipy@hub-cloud.browserstack.com/wd/hub'
 
 
