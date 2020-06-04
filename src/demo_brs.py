@@ -18,6 +18,8 @@ def google_search(driver, browser_name):
     # the end
     driver.quit()  # CAUTION: don't forget to call .quit() or you will get timeout from :brs
 
+
+#TODO Trang what is param :name for in > dv = windows_driver(browser='IE', browser_version='11', name='IE First Test')
 class Test:
 
     def test_IE(self):
