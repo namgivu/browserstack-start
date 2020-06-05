@@ -1,5 +1,5 @@
 import time, os
-from src.webdriver import load_webdriver_mswindows, load_webdriver_macos
+from src.service.webdriver import load_webdriver_mswindows, load_webdriver_macos
 
 APP_HOME = os.path.abspath(__file__ + '/../..')
 
