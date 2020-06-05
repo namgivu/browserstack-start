@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a4441e160982871ce0fa1311c2b0e2ed4d2ae5f4ef45f92eb04b5b2b08b69343"
+            "sha256": "6c8c9cdd0db26f561dc66d9e90baaa5c521c8b8dde6146d1a59959d0b2843920"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -22,6 +22,13 @@
                 "sha256:58587dd4dc3daefad0487f6d9ae32b4542b185e1c36db6993290e7c41ca2b47c"
             ],
             "version": "==1.5"
+        },
+        "appium-python-client": {
+            "hashes": [
+                "sha256:66af3c7f266d284d1318fb3b68d68cd49f63265dd8caec77337ab5035116f7a7"
+            ],
+            "index": "pypi",
+            "version": "==1.0.1"
         },
         "attrs": {
             "hashes": [

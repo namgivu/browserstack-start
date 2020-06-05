@@ -8,9 +8,9 @@ verify_ssl = true
 [packages]
 selenium = "*"
 python-dotenv = "*"
-
 pytest = "*"
 pytest-xdist = "*"
+appium-python-client = "*"
 
 [requires]
 python_version = "3.6"
