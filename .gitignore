@@ -4,3 +4,4 @@
 screen_shot/*.png
 **/*.pyc
 **/.pytest_cache/
+./.env

@@ -1,5 +1,5 @@
 import time, os
-from src.driver import load_webdriver_mswindows, load_webdriver_macos
+from src.webdriver import load_webdriver_mswindows, load_webdriver_macos
 
 APP_HOME = os.path.abspath(__file__ + '/../..')
 
@@ -19,7 +19,6 @@ def run_googlesearchdemo(driver, browser_name):
     driver.quit()  # CAUTION: don't forget to call .quit() or you will get timeout from :brs
 
 
-#TODO Trang what is param :name for in > dv = windows_driver(browser='IE', browser_version='11', name='IE First Test')
 class Test:
 
     def test_IE(self):
