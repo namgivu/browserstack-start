@@ -2,7 +2,9 @@ from selenium import webdriver
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+APP_HOME = os.path.abspath(__file__ + '/../..')
+
+load_dotenv(dotenv_path=f'{APP_HOME}/.env_vault/.env.trang')
 
 USERNAME      = os.environ.get('USERNAME')
 AUTOMATE_KEY  = os.environ.get('AUTOMATE_KEY')

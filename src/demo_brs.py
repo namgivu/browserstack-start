@@ -21,7 +21,7 @@ def run_googlesearchdemo(driver, browser_name):
 
 class Test:
 
-    def test_IE(self):
+    def test_IE(self):                                                 # :name aka what BRS used to named for testcase on BRS_dashboard
         wd = load_webdriver_mswindows(browser='IE', browser_version='11', name='IE First Test')  # wd aka webdriver
         run_googlesearchdemo(wd, 'IE')
 
