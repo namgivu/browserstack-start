@@ -7,8 +7,10 @@ verify_ssl = true
 
 [packages]
 selenium = "*"
-pytest = "*"
 python-dotenv = "*"
+
+pytest = "*"
+pytest-xdist = "*"
 
 [requires]
 python_version = "3.6"
