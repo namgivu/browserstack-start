@@ -31,13 +31,13 @@ def load_webdriver_win10(browser, browser_version, session_name):
     return driver
 
 
-def load_webdriver_osx(browser, browser_version, name):
+def load_webdriver_osx(browser, browser_version, session_name):
     desired_cap = {
         'os'              : 'OS X',
         'os_version'      : 'Catalina',
         'browser'         : browser,
         'browser_version' : browser_version,
-        'name'            : name,
+        'name'            : session_name,
     }
 
     driver = webdriver.Remote(command_executor=BROWSERSTACK_URL, desired_capabilities=desired_cap)

@@ -21,9 +21,9 @@ class Test:
         run_googlesearchdemo(wd, 'Chrome')
 
     def test_Safari(self):
-        wd = load_webdriver_osx(browser='Safari', browser_version='13', name='Safari First Test')
+        wd = load_webdriver_osx(browser='Safari', browser_version='13', session_name='Safari First Test')
         run_googlesearchdemo(wd, 'Safari')
 
     def test_Chrome_OSX(self):
-        wd = load_webdriver_osx(browser='Chrome', browser_version='81', name='Chrome_OSX First Test')
+        wd = load_webdriver_osx(browser='Chrome', browser_version='81', session_name='Chrome_OSX First Test')
         run_googlesearchdemo(wd, 'Chrome_OSX')
