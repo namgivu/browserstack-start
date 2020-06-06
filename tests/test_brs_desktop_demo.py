@@ -3,7 +3,7 @@ from tests.util import run_googlesearchdemo
 
 class Test:
 
-    def test_IE(self):                                                 # :name aka what BRS used to named for testcase on BRS_dashboard ref. doc/why-param-name-when-creating-wd.png
+    def test_IE(self):
         wd = load_webdriver_mswindows(browser='IE', browser_version='11', name='IE First Test')  # wd aka webdriver
         run_googlesearchdemo(wd, 'IE')
 

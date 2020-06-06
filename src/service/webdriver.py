@@ -16,6 +16,7 @@ USERNAME         = os.environ.get('USERNAME')
 AUTOMATE_KEY     = os.environ.get('AUTOMATE_KEY')
 BROWSERSTACK_URL = f'https://{USERNAME}:{AUTOMATE_KEY}@hub-cloud.browserstack.com/wd/hub'
 
+#                                                     :name aka what brs used to named for testcase on brs dashboard ref. doc/why-param-name-when-creating-wd.png
 def load_webdriver_mswindows(browser, browser_version, name):  # mswindows aka microsoft windows os
     desired_cap = {
         'os'              : 'Windows',
