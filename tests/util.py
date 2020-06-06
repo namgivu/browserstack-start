@@ -2,7 +2,7 @@ import time, os
 
 APP_HOME = os.path.abspath(__file__ + '/../..')
 
-def run_googlesearchdemo(driver, browser_name):  #TODO remove browser_name   #TODO should we name :driver as :wd ie :webdriver?
+def run_googlesearchdemo(driver, tag:'run tag used in snapshot filename'):  #TODO remove browser_name   #TODO should we name :driver as :wd ie :webdriver?
     driver.get('http://www.google.com')
 
     # enter search keyword
@@ -12,7 +12,7 @@ def run_googlesearchdemo(driver, browser_name):  #TODO remove browser_name   #TO
 
     # take screenshot
     time.sleep(3)
-    driver.save_screenshot(f'{APP_HOME}/screen_shot/{browser_name}.png')
+    driver.save_screenshot(f'{APP_HOME}/screen_shot/{tag}.png')
 
     # the end
     driver.quit()  # CAUTION: don't forget to call .quit() or you will get timeout from :brs
