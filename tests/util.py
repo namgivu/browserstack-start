@@ -2,7 +2,7 @@ import time, os
 
 APP_HOME = os.path.abspath(__file__ + '/../..')
 
-def run_googlesearchdemo(driver, browser_name):
+def run_googlesearchdemo(driver, browser_name):  #TODO remove browser_name   #TODO should we name :driver as :wd ie :webdriver?
     driver.get('http://www.google.com')
 
     # enter search keyword
