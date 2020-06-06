@@ -4,9 +4,8 @@ from tests.util import run_googlesearchdemo
 class Test:
 
     def test_IOS(self):
-        wd = load_webdriver_ios(device='iPhone XS', os_version='13', session_name='IOS test')
-        run_googlesearchdemo(wd, 'IOS')
+        d='iPhone XS'           ; osv='13'  ; sn='IOS test'     ; wd=load_webdriver_ios(d, osv, sn); run_googlesearchdemo(wd, 'IOS')  # d aka device, osv aka os_version, sn aka session_name
+
 
     def test_android(self):
-        wd = load_webdriver_android(device='Samsung Galaxy S10', os_version='9.0', session_name='Android test')
-        run_googlesearchdemo(wd, 'Android')
+        d='Samsung Galaxy S10'  ; osv='9.0' ; sn='Android test' ; wd=load_webdriver_ios(d, osv, sn); run_googlesearchdemo(wd, 'Android')  # d aka device, osv aka os_version, sn aka session_name
