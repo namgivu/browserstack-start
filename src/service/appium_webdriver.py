@@ -16,14 +16,15 @@ USERNAME         = os.environ.get('USERNAME')
 AUTOMATE_KEY     = os.environ.get('AUTOMATE_KEY')
 BROWSERSTACK_URL = f'https://{USERNAME}:{AUTOMATE_KEY}@hub-cloud.browserstack.com/wd/hub'
 
-def load_webdriver_ios(device, os_version, name):
+
+#                                          :session_name is what brs used to named for testcase on brs dashboard ref. doc/why-param-name-when-creating-wd.png  # brs aka browserstack
+def load_webdriver_ios(device, os_version, session_name):
     desired_cap = {
         'realMobile'  : True,
         'device'      : device,
         'os_version'  : os_version,
 
-        'browserName' : 'iPhone',
-        'name'        : name
+        'name'        : session_name
     }
 
     driver = webdriver.Remote(command_executor=BROWSERSTACK_URL, desired_capabilities=desired_cap)
@@ -31,14 +32,13 @@ def load_webdriver_ios(device, os_version, name):
     return driver
 
 
-def load_webdriver_android(device, os_version, name):
+def load_webdriver_android(device, os_version, session_name):
     desired_cap = {
         'realMobile'  : True,
         'device'      : device,
         'os_version'  : os_version,
 
-        'browserName' : 'android',
-        'name'        : name
+        'name'        : session_name
     }
     driver = webdriver.Remote(command_executor=BROWSERSTACK_URL, desired_capabilities=desired_cap)
     driver.implicitly_wait(5)
