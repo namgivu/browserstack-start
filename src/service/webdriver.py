@@ -6,8 +6,8 @@ APP_HOME = os.path.abspath(__file__ + '/../../..')
 
 #region load .env file
 env_f=f'{APP_HOME}/.env'
-if os.path.isfile(env_f) is False: raise Exception(f'Not found .env at {env_f} - please clone one from {APP_HOME}/.env_vault/.env.xxx')
-else:                              load_dotenv(dotenv_path=env_f, override=True)
+if not os.path.isfile(env_f): raise Exception(f'Not found .env at {env_f} - please clone one from {APP_HOME}/.env_vault/.env.xxx')
+else:                         load_dotenv(dotenv_path=env_f, override=True)
 #endregion
 
 
