@@ -18,10 +18,11 @@ BROWSERSTACK_URL = f'https://{USERNAME}:{AUTOMATE_KEY}@hub-cloud.browserstack.co
 
 def load_webdriver_ios(device, os_version, name):
     desired_cap = {
-        'browserName' : 'iPhone',
-        'device'      : device,
         'realMobile'  : True,
+        'device'      : device,
         'os_version'  : os_version,
+
+        'browserName' : 'iPhone',
         'name'        : name
     }
 
@@ -32,10 +33,11 @@ def load_webdriver_ios(device, os_version, name):
 
 def load_webdriver_android(device, os_version, name):
     desired_cap = {
-        'browserName' : 'android',
-        'device'      : device,
         'realMobile'  : True,
+        'device'      : device,
         'os_version'  : os_version,
+
+        'browserName' : 'android',
         'name'        : name
     }
     driver = webdriver.Remote(command_executor=BROWSERSTACK_URL, desired_capabilities=desired_cap)

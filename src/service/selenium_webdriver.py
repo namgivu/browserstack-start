@@ -21,8 +21,10 @@ def load_webdriver_win10(browser, browser_version, session_name):
     desired_cap = {
         'os'              : 'Windows',
         'os_version'      : '10',
+
         'browser'         : browser,
         'browser_version' : browser_version,
+
         'name'            : session_name,
     }
 
@@ -35,8 +37,10 @@ def load_webdriver_osx(browser, browser_version, session_name):
     desired_cap = {
         'os'              : 'OS X',
         'os_version'      : 'Catalina',
+
         'browser'         : browser,
         'browser_version' : browser_version,
+
         'name'            : session_name,
     }
 
