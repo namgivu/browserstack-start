@@ -31,7 +31,7 @@ def load_webdriver_mswindows(browser, browser_version, session_name):  # mswindo
     return driver
 
 
-def load_webdriver_macos(browser, browser_version, name):
+def load_webdriver_osx(browser, browser_version, name):
     desired_cap = {
         'os'              : 'OS X',
         'os_version'      : 'Catalina',
