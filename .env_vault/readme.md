@@ -4,5 +4,6 @@ or if you are a member, private env file be git clone here https://gitlab.com/na
 ```bash
 cd :browserstack_start/.env_vault/
     cd ./gitclone
-        git clone git@gitlab.com:namgivu/browserstack-secret.git
+        [[ ! -d ./browserstack-secret/ ]] && git clone git@gitlab.com:namgivu/browserstack-secret.git  \
+                                        || (cd ./browserstack-secret/ && git pull)
     cd - 1>/dev/null
