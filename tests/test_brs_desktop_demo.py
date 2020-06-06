@@ -4,20 +4,20 @@ from tests.util import run_googlesearchdemo
 class Test:
 
     def test_IE(self):
-        wd = load_webdriver_mswindows(browser='IE', browser_version='11', name='IE First Test')  # wd aka webdriver
+        wd = load_webdriver_mswindows(browser='IE', browser_version='11', session_name='IE First Test')  # wd aka webdriver
         run_googlesearchdemo(wd, 'IE')
 
     def test_Edge(self):
         # TODO why can not run with Edge version 80 81
-        wd = load_webdriver_mswindows(browser='Edge', browser_version='18', name='Edge First Test')
+        wd = load_webdriver_mswindows(browser='Edge', browser_version='18', session_name='Edge First Test')
         run_googlesearchdemo(wd, 'Edge')
 
     def test_Firefox(self):
-        wd = load_webdriver_mswindows(browser='Firefox', browser_version='74', name='Firefox First Test')
+        wd = load_webdriver_mswindows(browser='Firefox', browser_version='74', session_name='Firefox First Test')
         run_googlesearchdemo(wd, 'Firefox')
 
     def test_Chrome(self):
-        wd = load_webdriver_mswindows(browser='Chrome', browser_version='81', name='Chrome First Test')
+        wd = load_webdriver_mswindows(browser='Chrome', browser_version='81', session_name='Chrome First Test')
         run_googlesearchdemo(wd, 'Chrome')
 
     def test_Safari(self):
