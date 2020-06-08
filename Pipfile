@@ -7,10 +7,13 @@ verify_ssl = true
 
 [packages]
 selenium = "*"
+appium-python-client = "*"
+
 python-dotenv = "*"
+
 pytest = "*"
 pytest-xdist = "*"
-appium-python-client = "*"
+pytest-rerunfailures = "*"  # reruns failed tests
 
 [requires]
 python_version = "3.6"
