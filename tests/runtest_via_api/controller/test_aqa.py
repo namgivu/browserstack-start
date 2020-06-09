@@ -12,14 +12,7 @@ class Test(testing.TestCase):
         pass  #TODO
 
 
-    def test_whenfailed(self):
-        pass  # TODO
-
-
     def test_blank(self):
-        INP = {
-            'testcase_list': [
-                'tests/test_blank.py::Test::test',  # follow syntax of pytest node id ref. https://docs.pytest.org/en/stable/usage.html#nodeids
-            ],
-        }
-        self.simulate_post('/aqa', body=json.dumps(INP))
+        INP={ 'testcase_list': [ 'tests/test_blank.py::Test::test'] }  # follow syntax of pytest node id ref. https://docs.pytest.org/en/stable/usage.html#nodeids
+        r = self.simulate_post('/aqa', body=json.dumps(INP))
+        assert r.status_code == 200
