@@ -1,5 +1,5 @@
 from src.service.appium_webdriver import load_appium_webdriver
-from tests.util import run_googlesearchdemo
+from tests.test_brs.util import run_googlesearchdemo
 
 class Test:
     """

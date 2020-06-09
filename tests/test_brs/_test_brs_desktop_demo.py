@@ -1,5 +1,5 @@
 from src.service.selenium_webdriver import load_webdriver_win10, load_webdriver_osx
-from tests.util import run_googlesearchdemo
+from tests.test_brs.util import run_googlesearchdemo
 
 class Test:
     """
