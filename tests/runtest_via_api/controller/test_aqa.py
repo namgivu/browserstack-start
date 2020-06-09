@@ -16,3 +16,9 @@ class Test(testing.TestCase):
         INP={ 'testcase_list': [ 'tests/test_blank.py::Test::test'] }  # follow syntax of pytest node id ref. https://docs.pytest.org/en/stable/usage.html#nodeids
         r = self.simulate_post('/aqa', body=json.dumps(INP))
         assert r.status_code == 200
+
+
+    def test_failonpurpose(self):
+        INP={ 'testcase_list': [ 'tests/test_failonpurpose.py::Test::test'] }  # follow syntax of pytest node id ref. https://docs.pytest.org/en/stable/usage.html#nodeids
+        r = self.simulate_post('/aqa', body=json.dumps(INP))
+        assert r.status_code != 200
