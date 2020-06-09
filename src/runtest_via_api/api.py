@@ -2,6 +2,7 @@ import os
 import traceback
 
 import falcon
+from falcon_cors import CORS
 import json
 
 from src.service.misc import obj_to_dict
@@ -9,7 +10,21 @@ from src.runtest_via_api.controller.health  import HealthController
 from src.runtest_via_api.controller.aqa     import AQAController
 
 
-api = falcon.API()
+#region middleware
+''' allow all cors origins+methods ref. https://stackoverflow.com/a/60036107/248616 '''
+cors = CORS(
+    allow_all_origins=True,
+    allow_all_headers=True,
+    allow_all_methods=True,
+)
+
+middleware = [
+    cors.middleware,  # cors config ref. https://github.com/lwcolton/falcon-cors#usage
+]
+#endregion middleware
+
+
+api = falcon.API(middleware=middleware)
 
 
 #region customize exception response

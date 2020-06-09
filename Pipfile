@@ -17,6 +17,7 @@ pytest-rerunfailures = "*"  # reruns failed tests
 
 falcon = "==1.3.0"  # required fix version
 gunicorn = "*"
+falcon-cors = "*"
 
 [requires]
 python_version = "3.6"
