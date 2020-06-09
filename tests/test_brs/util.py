@@ -1,6 +1,6 @@
 import time, os
 
-APP_HOME = os.path.abspath(__file__ + '/../..')
+APP_HOME = os.path.abspath(__file__ + '/../../..')
 
 def run_googlesearchdemo(wd: 'web driver', tag: 'run tag used in snapshot filename'):  #TODO remove browser_name   #TODO should we name :driver as :wd ie :webdriver?
     wd.get('http://www.google.com')
