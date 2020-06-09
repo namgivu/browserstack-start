@@ -20,23 +20,11 @@ class Test(testing.TestCase):
         assert r.status_code != 200
 
 
-    def test_brs_mobile(self):
+    def test_brs(self):
         INP={ 'testcase_list': [
-            'tests/test_brs/_test_brs_mobile_demo.py::Test::test_android',
-            'tests/test_brs/_test_brs_mobile_demo.py::Test::test_ios',
-        ] }
-        r = self.simulate_post('/aqa', body=json.dumps(INP))
-        assert r.status_code == 200
-
-
-    def test_brs_desktop(self):
-        INP={ 'testcase_list': [
-            'tests/test_brs/_test_brs_desktop_demo.py::Test::test_Chrome',
-            'tests/test_brs/_test_brs_desktop_demo.py::Test::test_Firefox',
-            'tests/test_brs/_test_brs_desktop_demo.py::Test::test_IE',
-            'tests/test_brs/_test_brs_desktop_demo.py::Test::test_Edge',
-            'tests/test_brs/_test_brs_desktop_demo.py::Test::test_Chrome_OSX',
-            'tests/test_brs/_test_brs_desktop_demo.py::Test::test_Safari',
+            # just pick up 1 run for mobile, 1 run for desktop
+            'tests/test_brs/test_brs_mobile_demo.py::Test::test_android',
+            'tests/test_brs/test_brs_desktop_demo.py::Test::test_Chrome',
         ] }
         r = self.simulate_post('/aqa', body=json.dumps(INP))
         assert r.status_code == 200
